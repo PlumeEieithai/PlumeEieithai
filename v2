@@ -1,0 +1,115 @@
+local Library = {}
+
+function Library:CreateMain()
+
+	local RollyHubV3 = Instance.new("ScreenGui")
+	local MAINUI = Instance.new("Frame")
+	local Frame = Instance.new("Frame")
+	local Frame_2 = Instance.new("Frame")
+	local TextLabel = Instance.new("TextLabel")
+	local TextLabel_2 = Instance.new("TextLabel")
+	local Main = Instance.new("TextLabel")
+	local AllTab = Instance.new("Frame")
+	local TextButton = Instance.new("TextButton")
+	local TabListLayout = Instance.new("UIListLayout")
+	 
+	RollyHubV3.Name = "Rolly Hub V3"
+	RollyHubV3.Parent = game.CoreGui
+	RollyHubV3.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	MAINUI.Name = "MAINUI"
+	MAINUI.Parent = RollyHubV3
+	MAINUI.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+	MAINUI.BorderColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+	MAINUI.BorderSizePixel = 10
+	MAINUI.Position = UDim2.new(0.134482741, 0, 0.257317066, 0)
+	MAINUI.Size = UDim2.new(0, 798, 0, 473)
+
+	Frame.Parent = MAINUI
+	Frame.BackgroundColor3 = Color3.new(0.0666667, 0.0666667, 0.0666667)
+	Frame.BackgroundTransparency = 0.75
+	Frame.Size = UDim2.new(0, 235, 0, 473)
+
+	Frame_2.Parent = Frame
+	Frame_2.BackgroundColor3 = Color3.new(0, 0, 0)
+	Frame_2.BackgroundTransparency = 0.699999988079071
+	Frame_2.Size = UDim2.new(0, 235, 0, 171)
+
+	TextLabel.Parent = Frame
+	TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+	TextLabel.BackgroundTransparency = 1
+	TextLabel.Position = UDim2.new(0, 0, -0.0147991544, 0)
+	TextLabel.Size = UDim2.new(0, 386, 0, 178)
+	TextLabel.Font = Enum.Font.Arcade
+	TextLabel.LineHeight = 2.109999895095825
+	TextLabel.Text = "Rolly"
+	TextLabel.TextColor3 = Color3.new(0, 0.984314, 1)
+	TextLabel.TextScaled = true
+	TextLabel.TextSize = 90
+	TextLabel.TextStrokeColor3 = Color3.new(1, 0, 0)
+	TextLabel.TextStrokeTransparency = 0
+	TextLabel.TextWrapped = true
+	TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+	TextLabel.TextYAlignment = Enum.TextYAlignment.Top
+
+	TextLabel_2.Parent = Frame
+	TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+	TextLabel_2.BackgroundTransparency = 1
+	TextLabel_2.Position = UDim2.new(0, 0, 0.12684989, 0)
+	TextLabel_2.Size = UDim2.new(0, 200, 0, 50)
+	TextLabel_2.Font = Enum.Font.Arcade
+	TextLabel_2.Text = "V3"
+	TextLabel_2.TextColor3 = Color3.new(0, 0.917647, 1)
+	TextLabel_2.TextSize = 40
+	TextLabel_2.TextStrokeColor3 = Color3.new(1, 0, 0)
+	TextLabel_2.TextStrokeTransparency = 0
+	TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+	TextLabel_2.TextYAlignment = Enum.TextYAlignment.Top
+
+	Main.Name = "Main"
+	Main.Parent = MAINUI
+	Main.BackgroundColor3 = Color3.new(1, 1, 1)
+	Main.BackgroundTransparency = 1
+	Main.Position = UDim2.new(0, 0, 0.232558146, 0)
+	Main.Size = UDim2.new(0, 200, 0, 50)
+	Main.Font = Enum.Font.Arcade
+	Main.TextColor3 = Color3.new(1, 1, 1)
+	Main.TextSize = 23
+	Main.TextStrokeTransparency = 0
+	Main.TextWrapped = true
+
+	AllTab.Name = "AllTab"
+	AllTab.Parent = MAINUI
+	AllTab.BackgroundColor3 = Color3.new(0, 0, 0)
+	AllTab.BackgroundTransparency = 0.8500000238418579
+	AllTab.Position = UDim2.new(0, 0, 0.380549669, 0)
+	AllTab.Size = UDim2.new(0, 235, 0, 293)
+
+	TabListLayout.Name = "TabListLayout"
+	TabListLayout.Parent = AllTab
+	TabListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+	TabListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	TabListLayout.Padding = UDim.new(0, 10)
+	
+	local GamerLibrary = {}
+
+	function GamerLibrary:NewButton(name)
+		local TextButton = Instance.new("TextButton")
+
+		TextButton.Parent = AllTab
+		TextButton.BackgroundColor3 = Color3.new(0.152941, 0.152941, 0.152941)
+		TextButton.BorderColor3 = Color3.new(0.470588, 0.470588, 0.470588)
+		TextButton.BorderSizePixel = 3
+		TextButton.Position = UDim2.new(0.038297873, 0, 0.059602648, 0)
+		TextButton.Size = UDim2.new(0, 217, 0, 32)
+		TextButton.Font = Enum.Font.Arcade
+		TextButton.TextColor3 = Color3.new(0, 0.952941, 1)
+		TextButton.TextSize = 25
+		TextButton.TextStrokeColor3 = Color3.new(0.952941, 1, 0)
+		TextButton.TextStrokeTransparency = 0
+	end
+
+	return GamerLibrary;
+end
+
+return Library;
